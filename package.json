@@ -1,0 +1,113 @@
+{
+  "name": "ts-pubsub-plus",
+  "version": "1.0.0",
+  "description": "is indexDb api",
+  "author": "HaoChiGuoZi<421826878@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xx732395/pubsub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xx732395/pubsub.git"
+  },
+  "bugs": "https://github.com/xx732395/pubsub/issues",
+  "keywords": [
+    "pubsub",
+    "Publish Subscription",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "publish": "release-it --npm.skipChecks --no-git.requireCleanWorkingDir --ci",
+    "test": "vitest",
+    "lint-staged": "lint-staged",
+    "lint:eslint": "eslint \"src/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{ts,js,json,tsx,css,less,scss,vue,html,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "lint-staged": "^13.2.0",
+    "pnpm": "^8.1.1",
+    "prettier": "^2.8.7",
+    "release-it": "^15.10.1",
+    "rimraf": "^4.4.1",
+    "simple-git-hooks": "^2.8.1",
+    "typescript": "^5.0.3",
+    "unbuild": "^1.2.0",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,less,styl,html}": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "requireBranch": [
+        "main"
+      ],
+      "tag": true,
+      "commitMessage": "release: ${name} ${version}",
+      "addUntrackedFiles": true
+    },
+    "hooks": {
+      "before:init": "npm run build",
+      "before:release": "echo before:release",
+      "after:release": "echo after:release"
+    }
+  }
+}
