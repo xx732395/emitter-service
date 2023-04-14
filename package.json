@@ -1,7 +1,7 @@
 {
   "name": "emitter-service",
   "version": "1.0.0",
-  "description": "is indexDb api",
+  "description": "is typescript pubsub",
   "author": "HaoChiGuoZi<421826878@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/xx732395/emitter-service#readme",
