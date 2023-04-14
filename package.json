@@ -1,6 +1,6 @@
 {
   "name": "emitter-service",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "is typescript pubsub",
   "author": "HaoChiGuoZi<421826878@qq.com>",
   "license": "MIT",
@@ -41,7 +41,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "publish": "release-it --npm.skipChecks --no-git.requireCleanWorkingDir --ci",
+    "release-publish": "release-it --npm.skipChecks --no-git.requireCleanWorkingDir --ci",
     "test": "vitest",
     "lint-staged": "lint-staged",
     "lint:eslint": "eslint \"src/**/*.{vue,ts,tsx}\" --fix",
