@@ -1,17 +1,18 @@
 {
-  "name": "ts-pubsub-plus",
+  "name": "emitter-service",
   "version": "1.0.0",
   "description": "is indexDb api",
   "author": "HaoChiGuoZi<421826878@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/xx732395/pubsub#readme",
+  "homepage": "https://github.com/xx732395/emitter-service#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xx732395/pubsub.git"
+    "url": "git+https://github.com/xx732395/emitter-service.git"
   },
-  "bugs": "https://github.com/xx732395/pubsub/issues",
+  "bugs": "https://github.com/xx732395/emitter-service/issues",
   "keywords": [
     "pubsub",
+    "emitter-service",
     "Publish Subscription",
     "typescript"
   ],
