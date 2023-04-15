@@ -1,18 +1,18 @@
-# pubsub
+# emitter-service
 
 在 mitt 基础上添加了 once,runOnce 方法的发布订阅库
 再次感谢 mitt 的作者,为我门提供如此优秀的解决方案,https://github.com/developit/mitt
 
 // using ES6 modules
-import pubsub from 'pubsub'
+import pubsub from 'emitter-service'
 
 // using CommonJS modules
-var pubsub = require('pubsub')
+var pubsub = require('emitter-service')
 
 ## 用法
 
 ```js
-import pubsub from 'pubsub'
+import pubsub from 'emitter-service'
 
 const emitter = pubsub()
 
