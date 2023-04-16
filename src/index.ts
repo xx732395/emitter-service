@@ -24,7 +24,7 @@ export interface Emitter {
 
 // type AsnyFunc = <T = any, R = any>(...args: T[]) => Promise<R>;
 
-export function pubsub(): Emitter {
+export default (): Emitter => {
   const all = new Map()
   const body = {
     all,
