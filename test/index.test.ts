@@ -1,6 +1,6 @@
 /* eslint-disable no-await-in-loop */
 import { describe, expect, it, expectTypeOf, vi } from 'vitest'
-import { pubsub } from '../src/index'
+import pubsub from '../src/index'
 
 const pubsubInstance = pubsub()
 // eslint-disable-next-line no-promise-executor-return
